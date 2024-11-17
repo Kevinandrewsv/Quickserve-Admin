@@ -1,0 +1,133 @@
+/* Order Item Container */
+.order-item {
+    display: grid;
+    grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ebc334;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #505050;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+.order-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ebc334;
+    margin-right: 10px;
+}
+
+/* Highlight Key Elements */
+.order-item-food, .order-item-name {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Order Item Name Styling */
+.order-item-name {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+/* Address Section */
+.order-item-address {
+    margin-bottom: 5px;
+    color: #707070;
+    font-size: 13px;
+}
+
+/* Dropdown Menu Styling */
+.order-item select {
+    background-color: #ffe8e4;
+    border: 1px solid #ebc334;
+    border-radius: 5px;
+    width: max(10vw, 100px);
+    padding: 8px;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.order-item select:hover {
+    background-color: #fff4f0;
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 1000px) {
+    .order-item {
+        grid-template-columns: 0.7fr 2.5fr 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .order-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .order-item select {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .order-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .order-item img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .order-item-name {
+        font-size: 14px;
+    }
+
+    .order-item select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile-Only Adjustments */
+@media (max-width: 400px) {
+    .order-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .order-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .order-item select {
+        padding: 6px;
+        font-size: 11px;
+    }
+}

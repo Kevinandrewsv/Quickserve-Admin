@@ -1,0 +1,112 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap; /* Enable wrapping for mobile views */
+}
+
+/* Logo and Title Section */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1; /* Adjust spacing for responsiveness */
+}
+
+.logo {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Title Styling */
+.navbar-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #262626;
+    transition: color 0.3s ease;
+}
+
+.navbar-title:hover {
+    color: #ebc334; /* Yellow hover effect */
+}
+
+/* Profile Section */
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1; /* Adjust spacing for responsiveness */
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ebc334;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+/* Responsive Design: Tablets */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-title {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Responsive Design: Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 15px; /* Add spacing between elements */
+    }
+
+    .navbar-logo {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar-title {
+        text-align: center;
+        font-size: 20px; /* Slightly larger for better visibility */
+    }
+
+    .navbar-profile {
+        justify-content: center; /* Center the profile on small screens */
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+    }
+}
